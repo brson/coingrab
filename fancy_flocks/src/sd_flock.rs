@@ -178,6 +178,7 @@ impl Drop for SdFlock {
         // the file on disk, while double-panic is.
         #[cfg(unix)]
         {
+            use std::fs;
             let r = fs::remove_file(&self.0);
             if let Err(e) = r {
                 error!("unable to remove lock file during drop: {}", e);
