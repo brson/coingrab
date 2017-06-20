@@ -10,6 +10,10 @@ lazy_static! {
 fn define_coins() -> Vec<Coin> {
     vec![
         Coin {
+            sym: "1st",
+            name: "FirstBlood",
+        },
+        Coin {
             sym: "ANS",
             name: "AntShares",
         },
